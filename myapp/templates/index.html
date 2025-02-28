@@ -14,18 +14,18 @@
     <tbody>
         {%for student in students %}
         <tr>
-            <td>{{student.id}}</td>
+            <td>{{student.id}} </td>
             <td>{{student.name}}</td>
             <td>{{student.age}}</td>
             <td>{{student.course}}</td>
             <td>
                 <a href="{%url 'delete' student.id %}"><button class="btn btn-danger">DELETE</button></a>
-                <button class="btn btn-primary">EDIT</button>
+                <a href="{%url 'update' student.id %}"><button class="btn btn-primary">EDIT</button></a>
                 <button class="btn btn-success">VIEW</button>
             </td>
         </tr>
         {%endfor%}
     </tbody>
 </table>
-
+<a href="create/"><button class="btn btn-warning">NEW</button></a>
 {%endblock%}
