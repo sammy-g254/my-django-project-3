@@ -1,10 +1,11 @@
 {%extends 'base.html'%}
 {%block content%}
+{%exclude 'navbar.html'%}
 <h1>REGISTER</h1>
 <form method="POST">
     {%csrf_token%}
     {{form.as_p}}
     <button type="submit">REGISTER</button>
 </form>
-<p>Already have an account?<a href="#">LOGIN</a></p>
+<p>Already have an account?<a href="{% url "login"%}">LOGIN</a></p>
 {%endblock%}
